@@ -1,0 +1,88 @@
+.gpt3__possibility {
+    display: flex;
+    flex-direction: row;
+}
+
+.gpt3__possibility-image {
+    margin: 0 1.5rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.possibility-video {
+    /* Make the video take up the full width of the container */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the video covers the area without distortion */
+    border-radius: 8px; /* Optional: Adds rounded corners to the video */
+}
+
+/* Media queries to adjust the video size on smaller screens */
+@media (max-width: 768px) {
+    .possibility-video {
+        width: 90%; /* Slightly reduce the width on smaller screens */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .possibility-video {
+        width: 100%; /* Full width on very small screens */
+    }
+}
+.gpt3__possibility-container{
+    flex: 1.5;
+    font-family: var(--font-family);
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column;
+    margin: auto 1rem;
+}
+
+.gpt3__possibility-container h1 {
+    font-weight: 800;
+    font-size: 33px;
+    line-height: 45px;
+    margin: 1rem 0;
+
+    background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%), #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.gpt3__possibility-container p:first-child {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+
+    color: #71E5FF;
+}
+
+.gpt3__possibility-container p:last-child {
+    color: var(--color-text);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+@media screen and (max-width:960px){
+
+    .gpt3__possibility{
+        flex-direction: column;
+    }
+    .gpt3__possibility-container{
+        margin: 2rem;
+    }
+    .gpt3__possibility-container h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
